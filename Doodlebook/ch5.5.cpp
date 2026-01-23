@@ -24,3 +24,5 @@ int main() {
 
     printf("%d", max);
 }
+
+// 최소값은 반대로
