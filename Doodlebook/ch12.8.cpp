@@ -7,7 +7,7 @@ public:
         cout << "Weapon(int)" << endl;
     }
 
-    virtual void Use() {
+    virtual void Use() { // 가상 함수
         cout << "Weapon::Use()" << endl;
     }
 
@@ -21,7 +21,7 @@ public:
         cout << "Sword(int)" << endl;
     }
 
-    void Use() {
+    void Use() {  // 오버라이딩
         cout << "Sword::Use()" << endl;
         swing();
     }
@@ -33,11 +33,12 @@ private:
 };
 
 class Magic : public Weapon {
+public:
     Magic(int power, int manaCost) : Weapon(power), manaCost(manaCost) {
         cout << "Magic(int, int)" << endl;
     }
 
-    void Use() {
+    void Use() { // 오버라이딩
         cout << "Magic::Use()" << endl;
         cast();
     }
